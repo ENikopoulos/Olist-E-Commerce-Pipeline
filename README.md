@@ -435,6 +435,82 @@ Missing values were not blindly overwritten. NULLs were preserved where values w
 
 ---
 
+## How to Run the Project
+
+### 1. Clone the repository
+
+```bash
+git clone <your-repo-url>
+cd olist-ecommerce-data-pipeline
+```
+
+### 2. Add raw data
+
+Download the Olist dataset from Kaggle and place the raw CSV files in:
+
+```text
+data/raw/
+```
+
+### 3. Start Docker services
+
+```bash
+docker compose up -d
+```
+
+### 4. Open Airflow
+
+Go to:
+
+```text
+http://127.0.0.1:8081
+```
+
+Login:
+
+```text
+username: admin
+password: admin
+```
+
+### 5. Trigger the DAG
+
+Run the following DAG from the Airflow UI:
+
+```text
+olist_ecommerce_etl_pipeline
+```
+
+The DAG will transform, validate, and load the data into PostgreSQL.
+
+---
+
+## Example Database Connection
+
+For the Dockerized PostgreSQL database:
+
+```text
+Host: localhost
+Port: 5433
+Database: e_commerce
+User: olist_user
+Password: olist_password
+```
+
+Inside Docker containers, the PostgreSQL host is:
+
+```text
+postgres
+```
+
+with port:
+
+```text
+5432
+```
+
+---
+
 ## Data Quality
 
 The pipeline includes a validation layer that checks:
