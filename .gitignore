@@ -1,3 +1,10 @@
 /.venv
-/data
 /notebook
+
+data/raw/*
+data/transformed/*
+
+!data/raw/.gitkeep
+!data/transformed/.gitkeep
+!data/raw/README.md
+!data/transformed/README.md
