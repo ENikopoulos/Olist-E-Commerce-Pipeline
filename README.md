@@ -511,21 +511,6 @@ with port:
 
 ---
 
-## Data Quality
-
-The pipeline includes a validation layer that checks:
-
-- Primary key uniqueness
-- Foreign key integrity
-- Required field completeness
-- Valid review score ranges
-- Non-negative monetary values
-- Business-rule consistency
-
-The Power BI dashboard includes a data quality summary showing imputation rates and flagged order inconsistencies.
-
----
-
 ## Future Improvements
 
 Possible future extensions:
