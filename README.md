@@ -440,7 +440,7 @@ Missing values were not blindly overwritten. NULLs were preserved where values w
 ### 1. Clone the repository
 
 ```bash
-git clone <your-repo-url>
+git clone https://github.com/ENikopoulos/Olist-E-Commerce-Pipeline
 cd olist-ecommerce-data-pipeline
 ```
 
